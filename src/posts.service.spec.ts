@@ -31,4 +31,8 @@ describe("PostsService", () => {
 			fail("Post not found");
 		}
 	});
+  it("should return undefined for non-existent post", () => {
+		const foundPost = postsService.find("id");
+		expect(foundPost).toBeUndefined();
+	});
 });
